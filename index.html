@@ -9,7 +9,7 @@
   <title>Portfolio — Mahmoud Zakaria</title>
   <!-- Load the theme from localStorage -->
   <script>
-    (function() {
+    (function () {
       const savedTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
@@ -205,6 +205,39 @@
               </a>
             </footer>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algorithms -->
+    <section id="algorithms" class="algo-section">
+      <div class="container">
+        <h2 class="section-title">Algorithms & Performance Showcase</h2>
+        <p class="section-subtitle">Live comparison of code optimization and algorithmic efficiency</p>
+
+        <div class="algo-wrapper">
+          <div class="algo-tabs">
+            <button id="btn-bubble" class="tab-btn active" data-algo="bubble">Bubble Sort (Educative)</button>
+            <button id="btn-pointer" class="tab-btn" data-algo="pointer">Three-Pointer (Optimized)</button>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="file-name" id="algo-file-name">bubbleSort.ts</span>
+            </div>
+            <pre><code id="code-block" class="typescript">// Code is resolving dynamics...</code></pre>
+          </div>
+
+          <div class="algo-details">
+            <div class="complexity-badge" id="complexity-badge">Time Complexity: O(n²)</div>
+            <p id="complexity-text" class="complexity-desc">
+              The traditional sorting approach. It is highly educational for understanding data flow, but scales poorly
+              with large datasets due to intensive nested iterations.
+            </p>
+          </div>
         </div>
       </div>
     </section>
