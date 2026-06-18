@@ -243,26 +243,52 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
+    <section class="contact-section" id="contact">
       <div class="container">
-        <header class="section__header section__header--centered">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-heading" class="section__title">
-            Let&rsquo;s connect.
-          </h2>
-          <p class="section__subtitle">
-            As an aspiring Junior Full-stack Developer, I am open to Full-time roles, freelance work, and remote
-            collaborations.
+          
+          <span class="section-tag">CONTACT</span>
+          <h2 class="section-title">Let’s connect.</h2>
+          <p class="section-subtitle">
+              As an aspiring Junior Full-stack Developer, I am open to Full-time roles, freelance work, and remote collaborations.
           </p>
-        </header>
-
-        <div class="contact-actions">
-          <a class="btn btn--primary" href="mailto:mz2862001@gmail.com">
-            Send Email
-          </a>
-        </div>
+          
+          <button id="open-form-btn" class="btn-main">Send Email</button>
       </div>
-    </section>
+  
+      <div id="contact-modal" class="modal-overlay hidden">
+          <div class="modal-card">
+              <button id="close-form-btn" class="btn-close">&times;</button>
+              <h3 class="modal-title">Send a Message</h3>
+              
+              <form id="contact-form" novalidate>
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" placeholder="Your Name" required>
+                      <span class="error-message" id="name-error"></span>
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Your Email" required>
+                      <span class="error-message" id="email-error"></span>
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="4" placeholder="Your Message..." required></textarea>
+                      <span class="error-message" id="message-error"></span>
+                  </div>
+  
+                  <button type="submit" id="submit-btn" class="btn-submit">
+                      <span class="btn-text">Submit</span>
+                      <span class="spinner hidden"></span>
+                  </button>
+                  
+                  <div id="form-status" class="form-status hidden"></div>
+              </form>
+          </div>
+      </div>
+  </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">

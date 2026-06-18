@@ -1,0 +1,211 @@
+// contact.scss - Advanced Dynamic Component Structure
+
+.contact-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: var(--color-bg); 
+  transition: background-color 0.3s ease;
+
+  .container {
+    max-width: 1140px; 
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    color: var(--color-accent); 
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-text); 
+    transition: color 0.3s ease;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--color-text-muted); 
+    transition: color 0.3s ease;
+  }
+
+  // Main Outlined/Solid Trigger Button
+  .btn-main {
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--color-primary);      
+    color: var(--color-primary-text);             
+    border: 1px solid var(--color-border);        
+
+    &:hover {
+      background-color: var(--color-primary-hover); 
+    }
+  }
+}
+
+// --- Dynamic Modal Pop-up Base ---
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  
+  // Adaptive overlay background mapping
+  background-color: rgba(0, 0, 0, 0.4);
+  
+  html.dark &, body.dark &, body.dark-mode & {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  &.hidden {
+    display: none !important;
+  }
+}
+
+// 🏢 FIX 1: Card color changes completely based on screen theme background color
+.modal-card {
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  // Seamless blending with active background token
+  background-color: var(--color-bg) !important; 
+  border: 1px solid var(--color-border);
+  box-shadow: 0 15px 40px var(--color-shadow);
+}
+
+.modal-title {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.btn-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+
+  &:hover { 
+    color: var(--color-text); 
+  }
+}
+
+// --- Interactive Inputs Setup ---
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  input, textarea {
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    
+    // Smooth input field elevation shading
+    background-color: var(--color-surface-elevated); 
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+
+    &:focus {
+      border-color: var(--color-accent) !important; 
+    }
+  }
+}
+
+// 🎯 FIX 2: Submit Button matches global brand active styles uniformly
+.btn-submit {
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.2s ease;
+
+  // Uses your true project dynamic accent variable (The solid beautiful brand blue)
+  background-color: var(--color-accent) !important;
+  color: #ffffff !important; // Stays crisp white for absolute contrast readability
+  
+  &:hover { 
+    opacity: 0.95;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: var(--color-border) !important;
+    color: var(--color-text-muted) !important;
+    cursor: not-allowed;
+  }
+}
+
+// Async Utilities
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  &.hidden { display: none; }
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error-message { color: #ef4444; font-size: 0.8rem; margin-top: 0.25rem; }
+
+.form-status {
+  margin-top: 1rem; padding: 0.75rem; border-radius: 6px; text-align: center; font-size: 0.9rem;
+  &.success { background-color: var(--color-accent-subtle); color: var(--color-accent); border: 1px solid var(--color-accent); }
+  &.error { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444; }
+  &.hidden { display: none; }
+}
