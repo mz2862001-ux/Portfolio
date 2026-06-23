@@ -108,7 +108,7 @@ The production environment is live! To run and preview the project locally, you 
 
 ```bash
 # Clone the repository
-git clone [https://github.com/mahmoud-zakaria1/Portfolio.git](https://github.com/mahmoud-zakaria1/Portfolio.git)
+git clone https://github.com/mahmoud-zakaria1/Portfolio.git
 
 # Navigate into the project directory
 cd Portfolio
@@ -116,28 +116,25 @@ cd Portfolio
 # Compile SASS locally (ensure SASS compiler is active)
 # Open index.html using Live Server or your preferred browser
 
----
+Roadmap
+[x] Initialize repository and semantic HTML scaffold
 
-## 🗺️ Roadmap
+[x] Configure modular SCSS directory and compilation pipeline
 
-- [x] Initialize repository and semantic HTML scaffold
-- [x] Configure modular SCSS directory and compilation pipeline
-- [x] Build component-driven architecture (Theme-toggle, buttons, and layout grids)
-- [x] Connect continuous deployment pipeline via Vercel
-- [x] Implement Google Search Console verification for global search indexing
-- [ ] Publish detailed backend functionality for Restaurant Menu System and LMS
+[x] Build component-driven architecture (Theme-toggle, buttons, and layout grids)
 
----
+[x] Connect continuous deployment pipeline via Vercel
 
-## 👤 Author
+[x] Implement Google Search Console verification for global search indexing
 
-**Mahmoud Zakaria** — Full-Stack Developer
+[ ] Publish detailed backend functionality for Restaurant Menu System and LMS
 
-- **GitHub:** [@mahmoud-zakaria1](https://github.com/mahmoud-zakaria1)
-- **Email:** [mz2862001@gmail.com](mailto:mz2862001@gmail.com)
+👤 Author
+Mahmoud Zakaria — Full-Stack Developer
 
----
+GitHub: @mahmoud-zakaria1
 
-## 📄 License
+Email: mz2862001@gmail.com
 
+📄 License
 This project is for personal portfolio use. All rights reserved unless otherwise noted.
