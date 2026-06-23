@@ -79,6 +79,7 @@ Portfolio/
 ├── package.json               # Scripts and project dependencies manifest
 ├── tsconfig.json              # TypeScript compilation configuration
 └── README.md                  # Project documentation
+```
 
 ---
 
