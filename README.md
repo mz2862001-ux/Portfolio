@@ -134,7 +134,7 @@ cd Portfolio
 **Mahmoud Zakaria** — Full-Stack Developer
 
 - **GitHub:** [@mahmoud-zakaria1](https://github.com/mahmoud-zakaria1)
-- **LinkedIn:** [Mahmoud Zakaria](https://www.linkedin.com/in/mahmoud-zakaria-0b3297292/)
+- **LinkedIn:** [Mahmoud Zakaria](https://www.linkedin.com/in/mahmoud-zakaria-2644982ab/)
 - **Email:** [mz2862001@gmail.com](mailto:mz2862001@gmail.com)
 
 ---
