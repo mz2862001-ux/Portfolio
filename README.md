@@ -82,8 +82,6 @@ Portfolio/
 
 ---
 
----
-
 ## Page Structure
 
 | Section | ID | Description |
