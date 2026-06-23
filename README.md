@@ -82,6 +82,8 @@ Portfolio/
 
 ---
 
+---
+
 ## Page Structure
 
 | Section | ID | Description |
@@ -96,7 +98,7 @@ Portfolio/
 
 - **Minimalist aesthetic** — Restrained palette, generous spacing, no visual noise
 - **Semantic HTML** — Landmarks, headings hierarchy, and ARIA where it adds clarity
-- **Modular styling** — Architecture fully split into granular SCSS partials (`abstracts`, `base`, `components`, `layout`)
+- **Modular styling** — Architecture fully split into granular SCSS partials (abstracts, base, components, layout)
 - **SEO & Discoverability** — Verified ownership via Google Search Console using metadata injection for production indexing
 - **Continuous Deployment** — Integrated with Vercel for instant builds directly synchronized with GitHub commits
 
@@ -106,9 +108,8 @@ Portfolio/
 
 The production environment is live! To run and preview the project locally, you can serve it via a local development server:
 
-```bash
 # Clone the repository
-git clone https://github.com/mahmoud-zakaria1/Portfolio.git
+git clone [https://github.com/mahmoud-zakaria1/Portfolio.git](https://github.com/mahmoud-zakaria1/Portfolio.git)
 
 # Navigate into the project directory
 cd Portfolio
@@ -116,25 +117,28 @@ cd Portfolio
 # Compile SASS locally (ensure SASS compiler is active)
 # Open index.html using Live Server or your preferred browser
 
-Roadmap
-[x] Initialize repository and semantic HTML scaffold
+---
 
-[x] Configure modular SCSS directory and compilation pipeline
+## 🗺️ Roadmap
 
-[x] Build component-driven architecture (Theme-toggle, buttons, and layout grids)
+- [x] Initialize repository and semantic HTML scaffold
+- [x] Configure modular SCSS directory and compilation pipeline
+- [x] Build component-driven architecture (Theme-toggle, buttons, and layout grids)
+- [x] Connect continuous deployment pipeline via Vercel
+- [x] Implement Google Search Console verification for global search indexing
+- [ ] Publish detailed backend functionality for Restaurant Menu System and LMS
 
-[x] Connect continuous deployment pipeline via Vercel
+---
 
-[x] Implement Google Search Console verification for global search indexing
+## 👤 Author
 
-[ ] Publish detailed backend functionality for Restaurant Menu System and LMS
+**Mahmoud Zakaria** — Full-Stack Developer
 
-👤 Author
-Mahmoud Zakaria — Full-Stack Developer
+- **GitHub:** @mahmoud-zakaria1
+- **Email:** mz2862001@gmail.com
 
-GitHub: @mahmoud-zakaria1
+---
 
-Email: mz2862001@gmail.com
+## 📄 License
 
-📄 License
 This project is for personal portfolio use. All rights reserved unless otherwise noted.
